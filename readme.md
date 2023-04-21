@@ -1,5 +1,5 @@
 # alsong-time-synced-lyrics
----
+
 
 ### What is this?
 
