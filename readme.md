@@ -10,7 +10,7 @@ This is a simple script that will download time-synced-lyrics from [Alsong](http
 ```bash
 git https://github.com/BayernMuller/alsong-time-synced-lyrics.git
 cd alsong-time-synced-lyrics
-python get_lyrics.py "Led Zeppelin - Stairway to Heaven"
+python get_lyrics.py "Led Zeppelin" "Stairway to Heaven"
 ```
 
 ```
