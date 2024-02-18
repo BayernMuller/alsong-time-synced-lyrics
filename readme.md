@@ -32,7 +32,7 @@ python setup.py install
 ```bash
 $ alsong "Led Zeppelin" "Black Dog" | jq
 ```
-<details><summary><b>Click to view full result of Black Dog<b></summary>
+<details><summary><b>Click to view full result of Black Dog</b></summary>
 
 ```json
 {
@@ -170,7 +170,7 @@ $ alsong "Led Zeppelin" "Black Dog" | jq
 ```bash
 $ alsong "Metallica" "The Unforgiven" | jq
 ```
-<details><summary><b>Click to view full result of The Unforgiven<b></summary>
+<details><summary><b>Click to view full result of The Unforgiven</b></summary>
 
 ```json
 {
