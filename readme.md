@@ -1,86 +1,490 @@
+<p align="center">
+    <img src="res/logo.webp"></img>
+</p>
+
+
+<span align="center">
+
 # alsong-time-synced-lyrics
+
+</span>
 
 
 ### What is this?
+* This is [Alsong](https://www.altools.co.kr/download/alsong.aspx) lyrics database client for Python.
+* You can get time-synced lyrics from Alsong server.
+* I catched the request from Alsong client with Wireshark and implemented the request in Python.
 
-This is a simple script that will download time-synced-lyrics from [Alsong](https://www.altools.co.kr/download/alsong.aspx) lyrics user database.
+### Installation
+* with pip
+```bash
+pip install git+https://github.com/BayernMuller/alsong-time-synced-lyrics
+```
 
-### How to use
+* with git
+```bash
+git clone https://github.com/BayernMuller/alsong-time-synced-lyrics
+cd alsong-time-synced-lyrics
+python setup.py install
+```
+
+### Usage
+```bash
+$ alsong "Led Zeppelin" "Black Dog" | jq
+```
+<details><summary><b>Click to view full result of Black Dog<b></summary>
+
+```json
+{
+  "lines": [
+    {
+      "time": 7.12,
+      "text": "Hey, hey, mama, said the way you move,"
+    },
+    {
+      "time": 9.09,
+      "text": "gonna make you sweat, gonna make you groove."
+    },
+    {
+      "time": 18.7,
+      "text": "Oh, oh, child, way you shake that thing,"
+    },
+    {
+      "time": 20.97,
+      "text": "gonna make you burn, gonna make you sting."
+    },
+    {
+      "time": 29.99,
+      "text": "Hey, hey, baby, when you walk that way,"
+    },
+    {
+      "time": 32.35,
+      "text": "watch your honey drip, can't keep away."
+    },
+    {
+      "time": 53.69,
+      "text": "*Ah yeah, ah yeah, ah, ah, ah."
+    },
+    {
+      "time": 59.24,
+      "text": "Ah yeah, ah yeah, ah, ah, ah."
+    },
+    {
+      "time": 64.68,
+      "text": "I gotta roll, can't stand still,"
+    },
+    {
+      "time": 68,
+      "text": "got a flame in my heart,"
+    },
+    {
+      "time": 69.5,
+      "text": "can't get my fill."
+    },
+    {
+      "time": 75.93,
+      "text": "Eyes that shine burning red,"
+    },
+    {
+      "time": 78.99,
+      "text": "dreams of you all through my head."
+    },
+    {
+      "time": 89.09,
+      "text": "Ah ah ah ah ah ah ah ah ah ah ah ah ah."
+    },
+    {
+      "time": 100.27,
+      "text": "Hey, baby, oh, baby, pretty baby,"
+    },
+    {
+      "time": 104.38,
+      "text": "Tell me won't you you do me now."
+    },
+    {
+      "time": 124.2,
+      "text": "Didn't take too long 'fore I found out,"
+    },
+    {
+      "time": 127.16,
+      "text": "what people mean my down and out."
+    },
+    {
+      "time": 135.95,
+      "text": "Spent my money, took my car,"
+    },
+    {
+      "time": 138.41,
+      "text": "started telling her friends"
+    },
+    {
+      "time": 140.09,
+      "text": "she wants to be a star."
+    },
+    {
+      "time": 147.21,
+      "text": "I don't know but I been told,"
+    },
+    {
+      "time": 149.7,
+      "text": "a big-legged woman ain't got no soul."
+    },
+    {
+      "time": 153.87,
+      "text": "* Chorus"
+    },
+    {
+      "time": 182.23,
+      "text": "All I ask for when I pray,"
+    },
+    {
+      "time": 184.07,
+      "text": "steady rollin' woman gonna come my way."
+    },
+    {
+      "time": 192.98,
+      "text": "Need a woman gonna hold my hand,"
+    },
+    {
+      "time": 195.78,
+      "text": "won't tell me no lies, make me a happy man."
+    }
+  ],
+  "author": {
+    "name": "oksk",
+    "mail": "hi_bonobono@msn.com",
+    "homepage": null,
+    "comment": null
+  },
+  "info": {
+    "lyricID": 547908,
+    "artist": "led zepplin",
+    "title": "black dog",
+    "album": "Led Zepplin - Black Dog"
+  }
+}
+```
+
+</details>
 
 ```bash
-git https://github.com/BayernMuller/alsong-time-synced-lyrics.git
-cd alsong-time-synced-lyrics
-python get_lyrics.py "Led Zeppelin" "Stairway to Heaven"
+$ alsong "Metallica" "The Unforgiven" | jq
+```
+<details><summary><b>Click to view full result of The Unforgiven<b></summary>
+
+```json
+{
+  "lines": [
+    {
+      "time": 2.23,
+      "text": "The Unforgiven"
+    },
+    {
+      "time": 3.45,
+      "text": "[HETFIELD/ULRICH/HAMMET]"
+    },
+    {
+      "time": 56.29,
+      "text": "New blood joins this earth"
+    },
+    {
+      "time": 59.68,
+      "text": "And quikly he's subdued"
+    },
+    {
+      "time": 62.53,
+      "text": "Through constant pained disgrace"
+    },
+    {
+      "time": 66,
+      "text": "The young boy learns their rules"
+    },
+    {
+      "time": 69.56,
+      "text": "With time the child draws in"
+    },
+    {
+      "time": 72.85,
+      "text": "This whipping boy done wrong"
+    },
+    {
+      "time": 76.47,
+      "text": "Deprived of all his thoughts"
+    },
+    {
+      "time": 79.96,
+      "text": "The young man struggles on and on he's known"
+    },
+    {
+      "time": 85.11,
+      "text": "A vow unto his own"
+    },
+    {
+      "time": 88.4,
+      "text": "That never from this day"
+    },
+    {
+      "time": 91.62,
+      "text": "His will they'll take away"
+    },
+    {
+      "time": 98.41,
+      "text": "What I've felt"
+    },
+    {
+      "time": 99.89,
+      "text": "What I've known"
+    },
+    {
+      "time": 101.48,
+      "text": "Never shined through in what I've shown"
+    },
+    {
+      "time": 104.96,
+      "text": "Never be"
+    },
+    {
+      "time": 106.54,
+      "text": "Never see"
+    },
+    {
+      "time": 108.81,
+      "text": "Won't see what might have been"
+    },
+    {
+      "time": 111.85,
+      "text": "What I've felt"
+    },
+    {
+      "time": 113.4,
+      "text": "What I've known"
+    },
+    {
+      "time": 115.8,
+      "text": "Never shined through in what I've shown"
+    },
+    {
+      "time": 118.69,
+      "text": "Never free"
+    },
+    {
+      "time": 120.28,
+      "text": "Never me"
+    },
+    {
+      "time": 122.61,
+      "text": "So I dub thee unforgiven"
+    },
+    {
+      "time": 131.63,
+      "text": "They dedicate their lives"
+    },
+    {
+      "time": 134.81,
+      "text": "To running all of his"
+    },
+    {
+      "time": 138.27,
+      "text": "He tries to please them all"
+    },
+    {
+      "time": 141.64,
+      "text": "This bitter man he is"
+    },
+    {
+      "time": 145.09,
+      "text": "Throughout his life the same"
+    },
+    {
+      "time": 148.29,
+      "text": "He's battled constantly"
+    },
+    {
+      "time": 151.9,
+      "text": "This fight he cannot win"
+    },
+    {
+      "time": 155.4,
+      "text": "A tired man they see no longer cares"
+    },
+    {
+      "time": 160.72,
+      "text": "The old man then prepares"
+    },
+    {
+      "time": 164.09,
+      "text": "To die regretfully"
+    },
+    {
+      "time": 167.51,
+      "text": "That old man here is me"
+    },
+    {
+      "time": 173.87,
+      "text": "What I've felt"
+    },
+    {
+      "time": 175.26,
+      "text": "What I've known"
+    },
+    {
+      "time": 177.17,
+      "text": "Never shined through in what I've shown"
+    },
+    {
+      "time": 180.45,
+      "text": "Never be"
+    },
+    {
+      "time": 182.08,
+      "text": "Never see"
+    },
+    {
+      "time": 184.44,
+      "text": "Won't see what might have been"
+    },
+    {
+      "time": 187.51,
+      "text": "What I've felt"
+    },
+    {
+      "time": 189.11,
+      "text": "What I've known"
+    },
+    {
+      "time": 191.23,
+      "text": "Never shined through in what I've shown"
+    },
+    {
+      "time": 194.1,
+      "text": "Never free"
+    },
+    {
+      "time": 195.73,
+      "text": "Never me"
+    },
+    {
+      "time": 198.05,
+      "text": "So I dub the unforgiven"
+    },
+    {
+      "time": 273.44,
+      "text": "What I've felt"
+    },
+    {
+      "time": 274.93,
+      "text": "What I've known"
+    },
+    {
+      "time": 276.87,
+      "text": "Never shined through in what I've shown"
+    },
+    {
+      "time": 280.12,
+      "text": "Never be"
+    },
+    {
+      "time": 281.73,
+      "text": "Never see"
+    },
+    {
+      "time": 284.14,
+      "text": "Won't see what might have been"
+    },
+    {
+      "time": 287.29,
+      "text": "What I've felt"
+    },
+    {
+      "time": 288.78,
+      "text": "What I've known"
+    },
+    {
+      "time": 290.97,
+      "text": "Never shined through in what I've shown"
+    },
+    {
+      "time": 293.87,
+      "text": "Never free"
+    },
+    {
+      "time": 295.43,
+      "text": "Never me"
+    },
+    {
+      "time": 297.82,
+      "text": "So I dub the unforgiven"
+    },
+    {
+      "time": 314.98,
+      "text": "Never free"
+    },
+    {
+      "time": 316.14,
+      "text": "Never me"
+    },
+    {
+      "time": 318.52,
+      "text": "So I dub the unforgiven"
+    },
+    {
+      "time": 328.53,
+      "text": "You labeled me"
+    },
+    {
+      "time": 330.05,
+      "text": "I'll label you"
+    },
+    {
+      "time": 332.28,
+      "text": "So I dub the unforgiven"
+    },
+    {
+      "time": 342.45,
+      "text": "Never free"
+    },
+    {
+      "time": 343.88,
+      "text": "Never me"
+    },
+    {
+      "time": 346.28,
+      "text": "So I dub the unforgiven"
+    },
+    {
+      "time": 355.84,
+      "text": "You labeled me"
+    },
+    {
+      "time": 357.79,
+      "text": "I'll label you"
+    },
+    {
+      "time": 359.94,
+      "text": "So I dub the unforgiven"
+    },
+    {
+      "time": 367.82,
+      "text": "Nit Rock ManiaClub ... Angel's Wings"
+    },
+    {
+      "time": 368.76,
+      "text": "cyworld.com/vusrmsdyd"
+    }
+  ],
+  "author": {
+    "name": "YoUN",
+    "mail": "time_youn@hanmail.net",
+    "homepage": null,
+    "comment": null
+  },
+  "info": {
+    "lyricID": 979860,
+    "artist": "Metalica",
+    "title": "The Unforgiven",
+    "album": "Metallica - The Unforgiven"
+  }
+}
 ```
 
-```
-Searching for lyrics for Led Zepplin - Stairway to Heaven
-Found 26 user lyrics in 0.08s
-Getting first live lyrics for Led Zepplin - Stairway to Heaven
-Got live lyrics in 0.05s
-
------------
-
-53.54s		 There's a lady who's sure all that
-57.83s		 glitters is gold
-59.99s		 And she's buying a stairway to heaven.
-66.84s		 When she gets there
-68.53s		 She knows If the stores are all closed
-73.24s		 with a word
-74.41s		 she can get what she came for.
-81.6s		 Ooh, ooh, and she's buying a stairway
-89.98s		 to heaven.
-93.59s		 There's a sign on the wall but she wants
-98.01s		 to be sure
-99.93s		 'Cause you know sometimes words
-102.89s		 have two meanings.
-107.05s		 In a tree by the brook there's a songbird
-111.77s		 who sings,
-113.54s		 Sometimes all of our thoughts are
-116.92s		 misgiven.
-139.53s		 Ooh, it makes me wonder,
-147.7s		 Ooh, it makes me wonder.
-159.05s		 There's a feeling I get when I look to
-163.81s		 the west,
-164.8s		 And my spirit is crying for leaving.
-171.47s		 In my thoughts I have seen rings of
-174.69s		 smoke through the trees,
-177.12s		 And the voices of those who standing
-181.28s		 looking.
-189.29s		 Ooh, it makes me wonder,
-199.69s		 Ooh, it really makes me wonder.
-210.02s		 And it's whispered that soon If we all
-214.19s		 call the tune
-215.77s		 Then the piper will lead us to reason
-221.76s		 And a new day will dawn for those
-225.44s		 who stand long
-227.46s		 And the forests will echo with laughter.
-260.6s		 If there's a bustle in your hedgerow
-264.53s		 don't be alarmed now,
-266.1s		 It's just a spring clean for
-268.29s		 the May queen.
-271.65s		 Yes, there are two paths you can
-274.16s		 go by
-275.37s		 But in the long run
-277.51s		 There's still time to change the road
-280.36s		 you're on.
-290.24s		 And it makes me wonder.
-308.08s		 Your head is humming and it won't go
-311.46s		 In case you don't know,
-313.39s		 The piper's calling you to join him,
-318.91s		 Dear lady, can you hear the wind blow,
-322.84s		 And did you know your stairway lies
-326.64s		 on the whispering wind
-405.21s		 And as we wind on down the road
-409.96s		 Our shadows taller than our soul.
-414.65s		 There walks a lady we all know
-419.51s		 Who shines white light
-420.89s		 And wants to show how everything
-424.97s		 still turns to gold.
-428.74s		 And if you listen very hard
-433.56s		 The tune will come to you at last
-438.15s		 When all are one and one is all
-442.54s		 To be a rock and not to roll.
-467.07s		 And she's buying a stairway to heaven.
-
-```
+</details>
