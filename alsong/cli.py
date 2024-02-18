@@ -1,8 +1,8 @@
 from alsong import ALSong
-import time
 import sys
+import time
 
-if __name__ == '__main__':
+def main():
     if len(sys.argv) < 3:
         print(f"Usage: {sys.argv[0]} <artist> <title>")
         sys.exit(1)
@@ -32,3 +32,5 @@ if __name__ == '__main__':
     print(f"Got live lyrics in %.2fs" % (end - begin), file=sys.stderr)
     print(live_lyrics.model_dump_json())
     
+if __name__ == "__main__":
+    main()
