@@ -1,19 +1,21 @@
-from attr import dataclass
-from typing import List
+from typing import List, Optional
+from pydantic import BaseModel
 
-@dataclass
-class Lyric:
+class Lyric(BaseModel):
     lyricID: int
     artist: str
     title: str
     album: str
-
-@dataclass
-class Line:
+class Line(BaseModel):
     time: float
     text: str
 
-@dataclass
-class LiveLyrics:
-    lines: List[Line] = list()
-    authour: str = ""
+class Author(BaseModel):
+    name: Optional[str] = None
+    mail: Optional[str] = None
+    homepage: Optional[str] = None
+    comment: Optional[str] = None
+class LiveLyrics(BaseModel):
+    lines: Optional[List[Line]] = []
+    author: Optional[str] = None
+    info: Optional[str] = None
