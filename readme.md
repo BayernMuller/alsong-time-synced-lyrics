@@ -1,5 +1,7 @@
 <p align="center">
-    <img src="res/logo.webp"></img>
+    <img src="res/logo.webp"/>
+    <br>
+    <img src="res/logo_license.svg"/>
 </p>
 
 
